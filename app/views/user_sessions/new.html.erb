@@ -1,0 +1,17 @@
+<h1>Log in</h1>
+
+<div>Don't have an account? <%= link_to "Sign up!", signup_path %></div>
+<div style="border: 4px black solid;">
+	<%= form_for @user_session do |f| %>
+		<%# deprecated f.error_messages %>
+		<div>
+			<%= f.label :login %>
+			<%= f.text_field :login %>
+		</div>
+		<div>
+			<%= f.label :password %>
+			<%= f.password_field :password %>
+		</div>
+		<div style="padding-left:166px;"><%= f.submit "Log in" %></div>
+	<% end %>
+</div>

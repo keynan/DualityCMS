@@ -1,0 +1,22 @@
+.an_asset:hover{
+	border:#000 solid 3px;
+}
+
+.an_asset .surf_to_edit_links{
+	display:none;
+	margin:0;
+}
+
+.an_asset:hover .surf_to_edit_links{
+	display:block;
+}
+
+.surf_to_edit_links{
+	background:#000;
+	padding:8px;
+	margin-bottom:4px;
+}
+
+.surf_to_edit_links a{
+	color:#fff;
+}

@@ -1,0 +1,61 @@
+body{
+	text-align:center;
+}
+
+li{
+	margin:8px 0;
+}
+
+ul.nav li{
+	float:left;
+	margin:8px;
+}
+
+div.form p{
+	margin:0;
+	padding:4px;
+}
+
+label{
+	float:left;
+	display:block;
+	width:160px;
+	margin:4px 8px 0 0;
+	text-align:right;
+}
+
+.site_tree_links{
+	float:right;
+	padding-top:4px;
+}
+
+.content_links{
+	float:right;
+}
+.content_info{
+	float:left;
+}
+
+#site_tree h6{
+	float:left;
+}
+
+#layout{
+	text-align:left;
+	margin:auto;
+	width:760px;
+}
+
+#layout div{
+	margin:8px;
+}
+
+#flash{
+	padding:8px 40px;
+}
+
+#assigned_privleges, #unassigned_privleges{
+	float:left;
+	width:200px;
+	min-height:200px;
+}

@@ -1,0 +1,41 @@
+.bodyimage {
+	padding:0 0 10px 0;
+}
+
+.image_t, .image_b, .image_b_r_c, .image_t_r_c, .image_b_l_c, .image_t_l_c {
+	font-size:6px;
+	height:6px;
+}
+.image_b_r_c, .image_t_r_c, .image_b_l_c, .image_t_l_c, .image_l_s, .image_r_s {
+	width: 8px;
+}
+
+.image_b{
+	height:6px;
+}
+
+.image_t_l_c {
+	background:url(/images/body_image/top_left_corner.jpg) no-repeat;
+	background-position: bottom center;
+}
+.image_t_r_c {
+	background:url(/images/body_image/top_right_corner.jpg) no-repeat;
+	background-position: bottom center;
+}
+.image_b_l_c {
+	background:url(/images/body_image/bottom_left_corner.jpg) no-repeat;
+	background-position: top center;
+}
+.image_b_r_c {
+	background:url(/images/body_image/bottom_right_corner.jpg) no-repeat;
+	background-position: top center;
+}
+
+.image_l_s {
+	background:url(/images/body_image/left_side.jpg) no-repeat;
+	background-position: center center;
+}
+.image_r_s {
+	background:url(/images/body_image/right_side.jpg) no-repeat;
+	background-position: center center;
+}

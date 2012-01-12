@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title><%= @page_title || "#{params[:controller].humanize}: #{params[:action].humanize}" %> (Duality CMS)</title>
+		<%= stylesheet_link_tag 'cms/basic', 'cms/layout', 'cms/images', 'cms/styles' %>
+		<link rel="stylesheet" type="text/css" href="/stylesheets/cms/print.css"	media="print"  />
+		<style type="text/css">
+			@import url("/stylesheets/cms/sophisticated.css") screen
+		</style>
+		<%= javascript_include_tag 'jquery', 'jquery_no_conflict', 'fckeditor/fckeditor', :defaults %>
+		<%= csrf_meta_tag %>
+	</head>
+	<body>
+		<div id="javascript_off"><h3>You must enable javascript for this application.</h3></div>
+		<div id="layout" style="display:none;">
+			<%= render :partial => 'cms/primary_nav' %>
+			<div id="flash"><%= flash[:notice] %></div>
+			<%= yield %>
+		</div>
+	</body>
+</html>

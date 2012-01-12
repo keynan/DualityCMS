@@ -1,0 +1,79 @@
+/*
+GENERAL SETUP
+-------------------------------------------------------------------*/
+body{
+	margin:-10px;
+}
+
+html body {
+	margin:0;
+	padding:0;
+	background-color:#532;
+	height:100%;
+}
+body {
+	font-family: Verdana,'Trebuchet MS',Arial,Helvetica,sans-serif;
+	color:#FFF;
+}
+div,p,dt,dd,li,td {
+	color:#FFF;
+	font-family: Verdana,'Trebuchet MS',Arial,Helvetica,sans-serif;
+	font-size:11px;
+}
+ul {
+	margin-top:0px;
+}
+
+h1{font-size:1.6em;		line-height:1.6em;}
+h2{font-size:1.45em;	line-height:1.45em;}
+h3{font-size:1.3em;		line-height:1.3em;}
+h4{font-size:1.15em;	line-height:1.15em;}
+h5{font-size:1em;			line-height:1em;}
+h1,h2,h3,h4,h5 {
+	color:#CA4;
+	font-family: Verdana,'Trebuchet MS',Arial,Helvetica,sans-serif;
+	font-weight:normal;
+	margin-bottom:.3em;
+}
+h2{
+	text-decoration:none;
+}
+a:link {
+	color:#BBB;
+	background-color:transparent;
+}
+a:visited {
+	color:#AAA;
+	background-color:transparent;
+}
+a:hover {
+	color:#DDD;
+	background-color:transparent;
+}
+a:active {
+	color:#DDD;
+	background-color:transparent;
+}
+
+/*
+UTILITY
+-------------------------------------------------------------------*/
+div.clear {
+	font-size:0;
+	height:0;
+	clear:both;
+}
+
+#skip {
+	display:none;
+}
+
+img {
+	border:0;
+}
+img.block {
+	display:block;
+}
+img.border{
+	border:1px solid #600;
+}

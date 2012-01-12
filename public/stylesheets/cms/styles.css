@@ -1,0 +1,20 @@
+.handle{
+	cursor:pointer;
+}
+ul, ul.reorderable, ul.nav{
+	list-style:none;
+}
+.reorderable li:hover, .site_tree_branch:hover{
+	background:#432;
+}
+
+.form{
+	border:#000 solid 1px;
+}
+.form p:hover{
+	background:#000;
+}
+
+#assigned_privleges, #unassigned_privleges{
+	border:#000 solid 1px;
+}
