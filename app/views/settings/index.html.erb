@@ -1,0 +1,17 @@
+<%= render :partial => 'admin/sub_nav' %>
+
+<div class="form">
+	<%= form_for @cms_settings, :url => ('/settings/' + @cms_settings.id.to_s) do |f| %>
+		<%= form_field_formater(f.label(:workflow),               f.check_box(:workflow)) %>
+		<%= form_field_formater(f.label(:allow_group_editing),		f.check_box(:allow_group_editing)) %>
+		<%= form_field_formater(f.label(:ajax_navigation),				f.check_box(:ajax_navigation)) %>
+		<%= form_field_formater(f.label(:wysiwyg),								f.check_box(:page_caching)) %>
+		<%= form_field_formater(f.label(:page_caching),						f.check_box(:page_caching)) %>
+		<%= form_field_formater(f.label(:container_caching),			f.check_box(:container_caching)) %>
+		<%= form_field_formater(f.label(:asset_caching),					f.check_box(:asset_caching)) %>
+		<%= form_field_formater(f.label(:strong_authentication, "Use Strong Authentication"),	f.check_box(:strong_authentication)) %>
+		<%= form_field_formater(f.label(:svn_retention),					f.text_field(:svn_retention)) %>
+		<%= form_field_formater(f.label(:protected_directories),	f.text_area(:protected_directories)) %>
+		<%= form_field_formater(f.label(''), submit_tag('Save')) %>
+	<% end %>
+</div>

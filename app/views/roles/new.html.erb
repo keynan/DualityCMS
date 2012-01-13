@@ -1,0 +1,4 @@
+<%= render :partial => 'admin/sub_nav' %>
+<% form_for :role, :url => {:action => 'create'} do |f| %>
+	<%= render :partial => 'role', :locals => {f => f} %>
+<% end %>

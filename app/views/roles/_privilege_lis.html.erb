@@ -1,0 +1,8 @@
+<% privileges.each do |privilege| %>
+	<li id="privilege_<%= privilege.id %>" class="privileges">
+		<span class="handle">X</span> <%= privilege.name.humanize %>
+	</li>
+	
+	<%= draggable_element 'privilege_'+privilege.id.to_s, :revert => true %>
+<% end %>
+	

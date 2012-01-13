@@ -1,0 +1,2 @@
+page.remove(@id)
+page.insert_html :top, @to, render(:partial => 'privilege_lis', :locals => {:privileges => [@privilege]})

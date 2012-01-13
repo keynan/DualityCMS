@@ -1,0 +1,6 @@
+<%= render :partial => 'admin/sub_nav' %>
+<div class="form">
+	<% form_for :role, :url => {:action => 'update'} do |f| %>
+		<%= render :partial => 'role', :locals => {f => f} %>
+	<% end %>
+</div>

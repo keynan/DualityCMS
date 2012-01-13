@@ -1,0 +1,23 @@
+<%= render :partial => 'admin/sub_nav' %>
+<%= title ('Role: ' +@role.name) %>
+<div id="assigned_privileges">
+	<ul id="assigned_privileges_list">
+		<%= render :partial => 'privilege_lis', :locals => {:privileges => @role.privileges} %>
+	</ul>
+</div>
+
+<div id="unassigned_privileges">
+	<ul id="unassigned_privileges_list">
+		<%= render :partial => 'privilege_lis', :locals => {:privileges => @unassigned_privileges} %>
+	</ul>
+</div>
+
+<%= drop_receiving_element 'assigned_privileges',
+			:url => { :action => 'grant_privilege', :role_id => @role.id },
+			:accept => 'privileges'
+	%>
+
+<%= drop_receiving_element 'unassigned_privileges',
+			:url => { :action => 'revoke_privilege', :role_id => @role.id },
+			:accept => 'privileges'
+	%>

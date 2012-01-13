@@ -1,0 +1,6 @@
+<%= render :partial => 'admin/sub_nav' %>
+<ul>
+	<% @roles.each do |role| %>
+		<li><%=h role.name %> <%= link_to 'Edit', :action => 'privileges_and_roles', :id => role.id %></li>
+	<% end %>
+</ul>
