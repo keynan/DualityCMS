@@ -11,6 +11,9 @@ DualityCMS::Application.routes.draw do
 
   resources :users
 
+	match 'settings' => 'settings#index', :as => :cms_setting
+	match 'settings/:id' => 'settings#update', :method => :post
+
 	match '' => 'dashboard#index', :as => :root
 	match '' => 'dashboard#index', :as => :dashboard
 	

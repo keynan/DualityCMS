@@ -4,14 +4,8 @@
 <div style="border: 4px black solid;">
 	<%= form_for @user_session do |f| %>
 		<%# deprecated f.error_messages %>
-		<div>
-			<%= f.label :login %>
-			<%= f.text_field :login %>
-		</div>
-		<div>
-			<%= f.label :password %>
-			<%= f.password_field :password %>
-		</div>
-		<div style="padding-left:166px;"><%= f.submit "Log in" %></div>
+		<%= form_field_formater( f.label(:login), f.text_field(:login) ) %>
+		<%= form_field_formater( f.label(:password), f.password_field(:password) ) %>
+		<%= form_field_formater( f.label(''), f.submit("Log in")) %>
 	<% end %>
 </div>

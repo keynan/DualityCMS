@@ -5,7 +5,7 @@ class CmsController < ApplicationController
 
 	before_filter :get_cms_settings
 	hide_action :factory
-	hide_action :get_cms_settings
+	#hide_action :get_cms_settings
 
 protected
 

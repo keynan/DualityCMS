@@ -1,28 +1,10 @@
 <%= form_for @user do |f| %>
   <%# deprecated f.error_messages %>
-  <div>
-    <%= f.label :login %>
-    <%= f.text_field :login %>
-  </div>
-  <div>
-    <%= f.label :first_name, "First Name" %>
-    <%= f.text_field :first_name %>
-  </div>
-  <div>
-    <%= f.label :last_name, "Last Name" %>
-    <%= f.text_field :last_name %>
-  </div>
-  <div>
-    <%= f.label :email, "Email Address" %>
-    <%= f.text_field :email %>
-  </div>
-  <div>
-    <%= f.label :password %>
-    <%= f.password_field :password %>
-  </div>
-  <div>
-    <%= f.label :password_confirmation, "Confirm Password" %>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <div><%= f.submit (@user.new_record? ? "Sign up" : "Update") %></div>
+  <%= form_field_formater(f.label( :login), f.text_field( :login)) %>
+  <%= form_field_formater(f.label( :first_name, "First Name"), f.text_field( :first_name)) %>
+  <%= form_field_formater(f.label( :last_name, "Last Name"), f.text_field( :last_name)) %>
+  <%= form_field_formater(f.label( :email, "Email Address"), f.text_field( :email)) %>
+  <%= form_field_formater(f.label( :password), f.password_field( :password)) %>
+  <%= form_field_formater(f.label( :password_confirmation, "Confirm Password"), f.password_field( :password_confirmation)) %>
+  <%= form_field_formater(f.label(''), f.submit( (@user.new_record? ? "Sign up" : "Update"))) %></div>
 <% end %>
