@@ -54,7 +54,7 @@ label{
 	padding:8px 40px;
 }
 
-#assigned_privleges, #unassigned_privleges{
+#assigned_privileges, #unassigned_privileges{
 	float:left;
 	width:200px;
 	min-height:200px;

@@ -39,7 +39,7 @@ module DualityCMS
 			end
 		end
 		
-		def delete
+		def destroy
 			if request.xhr?
 				@model = factory(params[:controller]).find(params[:id])
 				@model.destroy

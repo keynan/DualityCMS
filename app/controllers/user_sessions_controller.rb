@@ -1,6 +1,6 @@
 class UserSessionsController < CmsController
+
   def new
-		
     @user_session = UserSession.new
 		#logger.debug(@user_session.instance_methods(true))
   end

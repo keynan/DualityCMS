@@ -11,14 +11,15 @@ DualityCMS::Application.routes.draw do
 
   resources :users
 
+	match 'roles' => 'roles#index', :as => :roles
+
 	match 'settings' => 'settings#index', :as => :cms_setting
 	match 'settings/:id' => 'settings#update', :method => :post
 
 	match '' => 'dashboard#index', :as => :root
 	match '' => 'dashboard#index', :as => :dashboard
 	
-	
-  # The priority is based upon order of creation:
+	# The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
@@ -73,7 +74,7 @@ DualityCMS::Application.routes.draw do
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+  match ':controller(/:action(/:id(.:format)))'
 	
 	########## OLD routing
 	

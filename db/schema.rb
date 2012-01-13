@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120111053846) do
+ActiveRecord::Schema.define(:version => 20120113024636) do
 
   create_table "cms_settings", :force => true do |t|
     t.boolean  "workflow",              :default => false
@@ -26,6 +26,24 @@ ActiveRecord::Schema.define(:version => 20120111053846) do
     t.text     "protected_directories"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "privileges", :force => true do |t|
+    t.string "name", :null => false
+  end
+
+  create_table "roles", :force => true do |t|
+    t.string "name", :null => false
+  end
+
+  create_table "roles_privileges", :force => true do |t|
+    t.integer "role_id",      :null => false
+    t.integer "privilege_id", :null => false
+  end
+
+  create_table "roles_users", :force => true do |t|
+    t.integer "role_id", :null => false
+    t.integer "user_id", :null => false
   end
 
   create_table "users", :force => true do |t|
